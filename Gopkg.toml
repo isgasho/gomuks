@@ -62,7 +62,7 @@
   version = "2.2.1"
 
 [[constraint]]
-  branch = "master"
+  branch = "top"
   name = "maunium.net/go/mautrix"
 
 [[constraint]]

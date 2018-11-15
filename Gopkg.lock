@@ -111,7 +111,7 @@
     "webp",
   ]
   pruneopts = "UT"
-  revision = "249dc8530c0efc2766606a940c1c50b434b2f1cd"
+  revision = "d9c2484c482e024a5de5ea73d456fb873fb7e8ac"
 
 [[projects]]
   branch = "master"
@@ -122,7 +122,7 @@
     "html/atom",
   ]
   pruneopts = "UT"
-  revision = "88d92db4c548972d942ac2a3531a8a9a34c82ca6"
+  revision = "adae6a3d119ae4890b46832a2e88a95adc62b8e7"
 
 [[projects]]
   digest = "1:37672ad5821719e2df8509c2edd4ba5ae192463237c73c3a2d24ef8b2bc9e36f"
@@ -163,15 +163,15 @@
   version = "v2.2.1"
 
 [[projects]]
-  branch = "master"
-  digest = "1:1abef70ba640c92bf2763f1b1fbcb8c6e3ba1b58b2dcfeb933a09bfc51f7147b"
+  branch = "top"
+  digest = "1:084f7c6290193724f39bace2c19743b73b3d44df2445f570be5d8bae2cf1cbab"
   name = "maunium.net/go/mautrix"
   packages = [
     ".",
     "format",
   ]
   pruneopts = "UT"
-  revision = "ffb03045581b402abaa1fd51340207dfb807dc81"
+  revision = "99db37ced7de506574a4f2170a4bda9fa1b56e09"
 
 [[projects]]
   branch = "master"

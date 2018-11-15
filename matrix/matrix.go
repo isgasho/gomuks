@@ -194,6 +194,10 @@ func (c *Container) OnLogin() {
 	debug.Print("Initializing syncer")
 	c.syncer = NewGomuksSyncer(c.config)
 	c.syncer.OnEventType(mautrix.EventMessage, c.HandleMessage)
+	c.syncer.OnEventType(mautrix.StateAliases, c.HandleMessage)
+	c.syncer.OnEventType(mautrix.StateCanonicalAlias, c.HandleMessage)
+	c.syncer.OnEventType(mautrix.StateTopic, c.HandleMessage)
+	c.syncer.OnEventType(mautrix.StateRoomName, c.HandleMessage)
 	c.syncer.OnEventType(mautrix.StateMember, c.HandleMembership)
 	c.syncer.OnEventType(mautrix.EphemeralEventReceipt, c.HandleReadReceipt)
 	c.syncer.OnEventType(mautrix.EphemeralEventTyping, c.HandleTyping)
@@ -290,7 +294,7 @@ func (c *Container) HandleMessage(source EventSource, evt *mautrix.Event) {
 			c.ui.Render()
 		}
 	} else {
-		debug.Printf("Parsing event %v failed (ParseEvent() returned nil).", evt)
+		debug.Printf("Parsing event %s type %s %v from %s in %s failed (ParseEvent() returned nil).", evt.ID, evt.Type, evt.Content.Raw, evt.Sender, evt.RoomID)
 	}
 }
 
